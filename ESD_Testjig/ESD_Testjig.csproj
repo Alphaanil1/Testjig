@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B99B21E-100D-408C-84CB-A7E8C976A08A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ESD_Testjig</RootNamespace>
+    <AssemblyName>ESD_Testjig</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>..\..\HotelLock_Offline_Testjig - Copy\HotelLock_Offline_Testjig\bin\Debug\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\HotelLock_Offline_Testjig - Copy\HotelLock_Offline_Testjig\bin\Debug\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\HotelLock_Offline_Testjig - Copy\HotelLock_Offline_Testjig\bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFunction.cs" />
+    <Compile Include="ConnectionManager\ApplicationConfig.cs" />
+    <Compile Include="ConnectionManager\ConnectionManager.cs" />
+    <Compile Include="Encrypt.cs" />
+    <Compile Include="frmConnectionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectionSettings.Designer.cs">
+      <DependentUpon>frmConnectionSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageForm.Designer.cs">
+      <DependentUpon>frmMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductType.Designer.cs">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalInformation.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\LogFile.cs" />
+    <Compile Include="MyDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDialogBox.designer.cs">
+      <DependentUpon>MyDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageBox.designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCBTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCBTest.designer.cs">
+      <DependentUpon>PCBTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseWaitMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PleaseWaitMsg.designer.cs">
+      <DependentUpon>PleaseWaitMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialNoMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialNoMsgBox.designer.cs">
+      <DependentUpon>SerialNoMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STMUSBCommunication.cs" />
+    <Compile Include="USBComm.cs" />
+    <Compile Include="USBCommunication.cs" />
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnectionSettings.resx">
+      <DependentUpon>frmConnectionSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageForm.resx">
+      <DependentUpon>frmMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductType.resx">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyDialogBox.resx">
+      <DependentUpon>MyDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCBTest.resx">
+      <DependentUpon>PCBTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseWaitMsg.resx">
+      <DependentUpon>PleaseWaitMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerialNoMsgBox.resx">
+      <DependentUpon>SerialNoMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\arrow right.png" />
+    <Content Include="Images\arrow.jpg" />
+    <Content Include="Images\arrowimage.png" />
+    <Content Include="Images\ArrowNew.png" />
+    <Content Include="Images\bg01.jpg" />
+    <Content Include="Images\bg_new.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\godrej-logo-small.png" />
+    <Content Include="Images\godrej-logo.png" />
+    <Content Include="Images\images.png" />
+    <Content Include="Images\images11.jpg" />
+    <Content Include="Images\inner-bg.png" />
+    <Content Include="Images\lock-icon.png" />
+    <Content Include="Images\Locking  Logo .png" />
+    <Content Include="Images\login-icon.png" />
+    <Content Include="Images\Login-screen.png" />
+    <Content Include="Images\Loginbg.png" />
+    <Content Include="Images\Logo-small.png" />
+    <Content Include="Images\maximize.png" />
+    <Content Include="Images\minimize.png" />
+    <Content Include="Images\New Logo.png" />
+    <Content Include="Images\panel.png" />
+    <Content Include="Images\Processing.gif" />
+    <Content Include="Images\Processing_1 .gif" />
+    <Content Include="Images\Processing_2.gif" />
+    <Content Include="Images\Test_Jig.ico" />
+    <Content Include="Resources\alert_30.png" />
+    <Content Include="Resources\info-30.png" />
+    <None Include="Resources\up-arrow.png" />
+    <None Include="Resources\Processing_2.gif" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\Logo-small.png" />
+    <None Include="Resources\Locking  Logo .png" />
+    <None Include="Resources\lock-icon.png" />
+    <None Include="Resources\inner-bg.png" />
+    <None Include="Resources\icon-arrow.png" />
+    <None Include="Resources\enter.png" />
+    <None Include="Resources\down-arrow.png" />
+    <None Include="Resources\curve-down-arrow.png" />
+    <None Include="Resources\Curvearrow1.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\arrow-png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESDBE\ESDBE.csproj">
+      <Project>{bb68b756-e3b8-4442-bd4f-e3ea1fda38c0}</Project>
+      <Name>ESDBE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESDDAL\ESDDAL.csproj">
+      <Project>{470bb054-7f18-4845-9821-c2fea8676059}</Project>
+      <Name>ESDDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
